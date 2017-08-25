@@ -24,7 +24,10 @@ def main(scr):
             engine.quit()
             break
 
+    score = engine.score()
     engine.join()
+    return score
 
 
-curses.wrapper(main)
+score = curses.wrapper(main)
+print("Final score: %d" % score)

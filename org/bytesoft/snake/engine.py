@@ -27,6 +27,9 @@ class Engine(threading.Thread):
     def is_finished(self):
         return self.finished
 
+    def score(self):
+        return len(self.snake)
+
     def make_food(self):
         while True:
             x, y = random.randint(0, self.field_w-1), random.randint(0, self.field_h-1)

@@ -16,6 +16,9 @@ class Snake:
         self.field_h = field_h
         self.saved_tail = None
 
+    def __len__(self):
+        return len(self.body)
+
     def _move_coord(self, coord, dir):
         x, y = coord
 
